@@ -1,0 +1,97 @@
+body{
+    background-color: #ee047a;
+    background-image: url("../cherrybomb_bg.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    margin: 0;
+}
+.container {    
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1.2fr 0.5fr 2fr 1fr;
+    gap: 1em;
+    grid-auto-flow: row;
+    width: 100vw auto;
+    height: 100vh;
+    padding: 2em; 
+    
+}
+.box1{
+    background-color: #ee047a;
+    grid-area: 1 / 1 / 7 / 4;
+    
+}
+.box2{
+    background-color: #94ff00;
+    grid-area: 2 / 1 / 3 / 4;
+    border: 10px solid;
+    padding: 10px;
+    border-image-source: linear-gradient(-45deg,#f4ec70, #3cbb9d, #83ca9e);
+    border-image-slice: 1;
+
+}
+.box3 { 
+    background-color: #f28bb8;
+    grid-area: 3 / 1 / 4 / 2;
+    border: 40px solid;
+    border-image-source: url("borderimg.png");
+    border-image-slice: 134;
+    border-image-repeat: round;
+
+    
+}
+.box4 { 
+    background-color: #f28bb8;
+    grid-area: 3 / 3 / 5 / 4; 
+    height: 270px;
+}
+.box4skewed {
+    background-color: #ee047a;
+    grid-area: 3 / 2 / 5 / 4;
+    height: 270px;
+    width: 60%;
+    border-right: 100px solid #f28bb8;
+    border-top: 270px solid transparent; 
+    box-sizing: border-box;
+    
+}
+
+.box5 {
+    background-color: #eb0d04;
+    grid-area: 5 / 1 / 6 / 3;
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    border-right: 10px solid;
+    border-image-source: linear-gradient(-45deg,#f4ec70, #3cbb9d, #83ca9e);
+    border-image-slice: 1;
+}
+.box6 {
+    background-color: #94ff00;
+    grid-area: 5 / 3 / 6 / 4;
+    border: 10px solid;
+    border-image-source: linear-gradient(-45deg,#f4ec70, #3cbb9d, #83ca9e);
+    border-image-slice: 1;
+    
+    
+}
+.content1{
+    color: #000000;
+    font-family: "blinker", "secular one", "manrope", "consolas", sans-serif;
+    font-size: 45px;
+    text-align: left;
+}
+.content2{
+    color: #000000;
+    font-family: "blinker", "secular one", "manrope", "consolas", sans-serif;
+    font-size: 45px;
+    text-align: right ;
+    padding-top: 5em;
+    padding-right: 10px;
+}
+/* I chose the layout of The Incal 3 - page 40 for my first exercise.
+Initially, I want to recreate the color palette.
+However, because I want to experiment if the comic’s layout would be suitable for another kind of art direction.
+Therefore, the mix of green-red-pink became my new colour palette for this assignment, aligning with the concept art of my favourite brand - NCT127’s 3rd mini album Cherry Bomb.
+I used the album cover as the website's background image, and also ultilised their graphics design by Sangho Bang to make one of the box's border.*/
+
+
