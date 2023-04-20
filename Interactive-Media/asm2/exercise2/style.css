@@ -1,0 +1,161 @@
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+  font-family: "manrope", "consolas", sans-serif;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#F5E0CC;
+  --col-02: #222323;
+  --col-03: #2D4012;
+  --col-04:#b6e878;
+  --col-05:#DE6B48;
+  /*--border: 1px solid var(--col-02);*/
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-05);
+  color: var(--col-02);
+  padding: 2vw;
+}
+p{
+  font-family: "secular one", "manrope", "consolas", sans-serif;
+  font-size: 45px;
+  text-align: center;
+  color:#2D4012; 
+}
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.MainGrid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  width: 95vw;
+  margin: 0;
+
+
+}
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  background-color: var(--col-01);
+  padding: 5px 10px;
+  
+}
+
+details > summary{
+  list-style: none
+
+}
+summary:hover{
+  color: #A12517;
+}
+ul{
+  margin: 0 -3em 0;
+}
+ ul li {
+  list-style: none;
+
+}
+
+.FilterSection{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  padding: 0.5rem;
+  
+}
+.Highlight ul li{
+  display: inline-block;
+  padding-top: 5px;
+}
+.time{
+  padding: 0 10px;
+}
+.level{
+  padding-left: 100px;
+}
+.SeeMore{
+  padding: 5px;
+}
+.SeeMore ul li{
+  padding: 0 10px;
+}
+
+.FilterBox{
+  float: left;
+}
+
+
+.RecipeLink{
+  text-decoration: none;
+  color: #2D4012;
+  font-weight: bold;
+  font-size: 20px;
+}
+.RecipeLink:hover{
+  color:#A12517;
+}
+
+
+.RecipeImg{
+  max-width: 100%;
+}
+
+.Attribution{
+font-size: 11px;
+
+}
+
+.Publisher{
+  font-size: 16px;
+}
+
+.Cuisine{
+  font-size: 16px;
+}
+
+.TimeToCook{
+  font-size: 16px;
+}
+
+.SkillLevel{
+  font-size: 16px;
+}
+
+.Course{
+  font-size: 16px;
+}
+
+.Servings{
+  font-size: 16px;
+}
+
+.Dietary{
+  font-size: 16px;
+}
+
+.DatePublished{
+  font-size: 16px;
+}
+
+.DateUpdated{
+  font-size: 16px;
+}
+
+.SpecialEquipment{
+  font-size: 16px;
+}
+
