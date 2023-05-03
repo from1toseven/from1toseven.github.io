@@ -1,0 +1,238 @@
+/*
+  This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
+  works for both.
+*/
+
+/*For the 'load-link' button, I created a curvy-border container for it to emphasis on the order 'Click to load page', while the color blue can give off trustworthy feeling to the users. The change of cursor to pointer also encourage the user to click on te button.
+The progress bar is also in blue to remain a coherent colour palette to the button. Progressing time is 10s, which is close to the time to load page so it won't provide a false signal to the users.
+I put all of the contents as a drop-down menu. The word 'Contents' will glow as the mouse hovering to encourage the 'clicking action'.
+Every contents is underlined and changed to blue as the mousehovering to represent a link, thus, sending a signal to users that by clicking, they will get to their needed content.
+I wanted to recreate the image of a glowing moon/sun so I put a bow-shadow around the switch-button everytiome the mouse hovering to it.*/
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  font-size: 16px;
+  /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+}
+details {
+  border: 1px solid var(--col-01);
+  border-radius: 4px;
+}
+details > summary{
+  font-weight: bold;
+  list-style-position: inside;
+  padding: 0.1rem 0.5rem 0;
+}
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+nav {
+  margin-top: 1rem;
+}
+nav ol li{
+  font-size: 1rem;
+  padding: 0.1em;
+  display: block;
+}
+nav ol li a{
+  text-decoration: none;
+  color: inherit;
+}
+nav ol li:hover{
+  text-decoration: underline; 
+  color: var(--col-03);
+
+}
+summary:hover{
+  text-shadow: 2px 2px 4px #bcb6b6;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+#mode-button{
+  float: right;
+  /* note the use of position: sticky to keep the button on the page even with scrolling */
+  position: sticky;
+  top: 1rem;
+  width: 6.2em;
+  height: 2.5em;
+  border-radius: 20px;
+  transition: 0.5s ease-out;
+}
+
+#mode-button:hover{
+  box-shadow: 3px 3px 17px 5px #aaa;
+  opacity: 1;
+}
+
+/* code for loading page */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* changing button to look like a link */
+#load-link{
+  line-height: 2rem;
+  background-color: #84E4FA;
+  border: 0;
+  border-radius: 30px;
+  padding-left: 50px; 
+  padding-right: 50px;
+  font-size: 20px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+/* throbber while page is fake loading */
+#load-throbber{
+  /* the width, height and background-color give it a shape on the page without any content inside - 
+  these value are arbitrary, please change to create your own design  */
+  width: 25%;
+  height: 1rem;
+  border: 5px solid #5252ff;
+  border-radius: 20px;
+  position: absolute;
+  top: 11.5rem;
+  bottom: 11.5rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  /* we also initially set display to none so it only shows once the link is clicked */
+  display: none;
+}
+#load-throbber::after{
+  content: '';
+  background-color:#84E4FA;
+  border-radius: 20px;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  animation: progress 10s linear forwards;
+
+}
+@keyframes progress{
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}
