@@ -173,8 +173,8 @@ li ul{
   border: 5px solid #5252ff;
   border-radius: 20px;
   position: absolute;
-  top: 11.5rem;
-  bottom: 11.5rem;
+  top: 25rem;
+  bottom: 15rem;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
