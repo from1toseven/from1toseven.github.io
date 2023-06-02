@@ -1,0 +1,27 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #e6d7c4;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+}
+svg{
+    width: 1000px;
+    align-self: center;
+    justify-self: center;
+}
+.cls-1 {
+    fill: none;
+    stroke: #df6133;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cls-2 {
+    fill: #df6133;
+  }
+
