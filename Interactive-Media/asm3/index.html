@@ -1,18 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8" name="viewpoint" content="width=device-witdth, initial-scale=1.0">
-        <title>Thread of Life</title>
-        <link rel="stylesheet" href="style.css"/>
-        <script scr="script.js"></script>
-    </head>
-   <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thread of Life</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Roboto&family=Secular+One&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div id="kumihimo_disk">
     <svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583.46 500.5">
-  <defs>
-  </defs>
-  <path class="cls-2" d="m355.15,55.21c0-70.39-243.71,64.52-180.13,99.72-63.58-35.2-63.58,234.65,0,199.45-63.58,35.2,180.13,170.12,180.13,99.72,0,70.39,243.71-64.52,180.13-99.72,63.58,35.2,63.58-234.65,0-199.45,63.58-35.2-180.13-170.12-180.13-99.72Zm-.67,235.49c-26.68,12.6-48.3-9.02-35.7-35.7-12.6-26.68,9.02-48.3,35.7-35.7,26.68-12.6,48.3,9.02,35.7,35.7,12.6,26.68-9.02,48.3-35.7,35.7Z"/>
-  <path class="cls-1" d="m355.15,55.21c0-70.39-243.71,64.52-180.13,99.72-63.58-35.2-63.58,234.65,0,199.45-63.58,35.2,180.13,170.12,180.13,99.72,0,70.39,243.71-64.52,180.13-99.72,63.58,35.2,63.58-234.65,0-199.45,63.58-35.2-180.13-170.12-180.13-99.72Zm-.67,235.49c-26.68,12.6-48.3-9.02-35.7-35.7-12.6-26.68,9.02-48.3,35.7-35.7,26.68-12.6,48.3,9.02,35.7,35.7,12.6,26.68-9.02,48.3-35.7,35.7Z"/>
+        <path class="cls-2" d="m355.15,55.21c0-70.39-243.71,64.52-180.13,99.72-63.58-35.2-63.58,234.65,0,199.45-63.58,35.2,180.13,170.12,180.13,99.72,0,70.39,243.71-64.52,180.13-99.72,63.58,35.2,63.58-234.65,0-199.45,63.58-35.2-180.13-170.12-180.13-99.72Zm-.67,235.49c-26.68,12.6-48.3-9.02-35.7-35.7-12.6-26.68,9.02-48.3,35.7-35.7,26.68-12.6,48.3,9.02,35.7,35.7,12.6,26.68-9.02,48.3-35.7,35.7Z"/>
+        <path class="cls-1" d="m355.15,55.21c0-70.39-243.71,64.52-180.13,99.72-63.58-35.2-63.58,234.65,0,199.45-63.58,35.2,180.13,170.12,180.13,99.72,0,70.39,243.71-64.52,180.13-99.72,63.58,35.2,63.58-234.65,0-199.45,63.58-35.2-180.13-170.12-180.13-99.72Zm-.67,235.49c-26.68,12.6-48.3-9.02-35.7-35.7-12.6-26.68,9.02-48.3,35.7-35.7,26.68-12.6,48.3,9.02,35.7,35.7,12.6,26.68-9.02,48.3-35.7,35.7Z"/>
+
     </svg>
-   </body> 
+    <div class="thread_buttons">
+        <button class="thread_button" id="thread_past"></button> 
+        <button class="thread_button" id="thread_present"></button>
+        <button class="thread_button" id="thread_future"></button>
+    </div>
+</div>
+<div id="overlay">
+    <div class="carousel-container">
+        <button id="prev-arrow" class="carousel-arrow">&lt;</button>
+        <button id="next-arrow" class="carousel-arrow">&gt;</button>
+        <div class="carousel-slide">
+            <img class="carousel-image" src="chosen_image/past.png" alt="Past Image">
+            <img class="carousel-image" src="chosen_image/present.png" alt="Present Image">
+            <img class="carousel-image" src="chosen_image/future.png" alt="Future Image">
+        </div>
+    </div>
+    <button id="close_button">&times;</button>
+</div>
+
+<button id="about_button">About</button>
+
+<div id="overlay2">
+    <div id="announcement_board">
+    <h2>ABOUT</h2>
+    <p>My project is called ‘Thread of life’. </p>
+    <p>My chosen pairing is the adjective Interwoven and Information design.</p>
+    <p>I came up with the concept after looking at these embroidery photographs by Morimoto and Anzeri.
+    In these photos, faces are sewed together, making me feel the inseparable connection between people.</p> 
+    <p>However, my approach is quite different. </p>
+    <p>In this design, I’d like to express the interwoven connection of the past, the present and the future of a person. For me, these 3 stages of life are what define us as human.
+    The past makes you today and the present is the foundation of the future. This is my interpretation of the phrase ‘interwoven’. </p>
+    <p>On the website, I’d like it to be a digital gallery of illustrations that recreate my past, present and future visualising as a Kumihimo thread disk. Displaying photos/illustrations is the main purpose of this website. </p>
+    <p> There are 3 main colours: purple, yellow and red depict each stage of life.</p>
+    <p>Past-purple: illustration of a younger self who could not love herself and struggle from mental illness. </p>
+    <p>Present-yellow: illustration portrays my current state of mind which is peaceful and on the journey of self-love. 
+        There are a lot of flowers growing on her head as an indication for the synonym “Birds are perch in safe land”. As having a healthier mentality, it becomes a great environment for flowers to grow, birds come to perch. </p>
+    <p> Future-red: illustration of a heart is clutched on my arms, embodying my wish to give my sincerity to others. However, the heart is also dripping in a red liquid. There is a double meaning to it. 
+        The red liquid can be overflowing love from others getting back to me, or it can be my blood dripping because someone may wants to take advantage of my kindness. 
+        This is a reminder for myself to be kind but also be wise.
+    </p>
+    <p> Web users can click on each thread to see the illustration.
+        My initial plan was to create a series of photos or illustrations for each thread, so it could appear like a chain, which aligns with the concept of interwoven. However, due to time-constraint I was only able to make 3 illustrations representing my past, present and future-self. 
+        Thus, I did a little modification. There is still the image carousel instead of going through same-concept illustrations, you will move between the past, the present and future. Your past leads to your present and then future.  
+    </p>
+    <p>At first, I planned to hide the carousel arrow. I found it the key element of the interwoven concept. They are the knot to connect the past to the present and further. Thus, I kept them at 60% opacity and when hovering they would be at 100% in order to keep the user's focus on the illustration. 
+        You can also click outside the background (on the overlay) to return to the main page. 
+    </p>
+
+    <button id="close_announcement_button">&times;</button>
+    </div>
+</div>
+  
+</body>
 </html>
+
