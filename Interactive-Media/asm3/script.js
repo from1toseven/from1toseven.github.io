@@ -1,4 +1,4 @@
-// Get the necessary elements
+//necessary elements
 const threadButtons = document.querySelectorAll('.thread_button');
 const overlay = document.getElementById('overlay');
 const closeButton = document.getElementById('close_button');
